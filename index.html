@@ -1,206 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Safe Harbour Wellbeing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Safe Harbour Wellbeing</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #F8FAFA;
-      color: #083B66;
-      line-height: 1.6;
-    }
 
-    <header style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:40px;">
-      background: linear-gradient(to right, #2A8C96, #083B66);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-<img src=style="width:100%; max-width:600px; border-radius:30px; box-shadow:0 10px 30px rgba(0,0,0,0.12);"
-style="width:220px; border-radius:20px; margin-bottom:30px;">
-    header h1 {
-      font-size: font-size: 64px;
-      margin-bottom: 20px;
-    }
+<style>
 
-    header p {
-      font-size: 22px;
-      max-width: 700px;
-      margin: auto;
-    }
-padding: 0 20px;
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      background: background: #EAF5F5;
-      color: #083B66;
-      padding: padding: 18px 36px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    section {<section style="background:#ffffff;">
-      padding: padding: 140px 20px;
-      max-width: width:420px;
-      margin: auto;
-    }
-border-radius: 30px;
-    h2 {
-      font-size: 36px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
+body{
+font-family:'Poppins',sans-serif;
+background:#F5FAFA;
+color:#083B66;
+line-height:1.6;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+nav{
+background:white;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    }
+.logo{
+font-size:34px;
+font-weight:700;
+color:#083B66;
+}
 
-    .about {
-      background: #EAF5F5;
-      border-radius: 30px;
-      padding: 40px;
-      text-align: center;
-    }
+.nav-links{
+display:flex;
+gap:35px;
+}
 
-    .contact {
-      background: #083B66;
-      color: white;
-      border-radius: 30px;
-      padding: 50px;
-      text-align: center;
-    }
+.nav-links a{
+text-decoration:none;
+color:#083B66;
+font-weight:500;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #666;
-    }
-  </style>
+.hero{
+padding:80px 60px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:320px;
+}
+
+.hero-text h1{
+font-size:72px;
+line-height:1.05;
+margin-bottom:25px;
+}
+
+.script{
+color:#2A8C96;
+font-weight:400;
+font-style:italic;
+}
+
+.hero-text p{
+font-size:24px;
+max-width:650px;
+margin-bottom:35px;
+}
+
+.button{
+display:inline-block;
+background:#2A8C96;
+color:white;
+padding:18px 36px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+font-size:18px;
+}
+
+.hero-image{
+flex:1;
+min-width:320px;
+}
+
+.hero-image img{
+width:100%;
+border-radius:30px;
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.section{
+padding:80px 60px;
+}
+
+.section-title{
+font-size:48px;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:30px;
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.about{
+background:white;
+padding:70px;
+border-radius:40px;
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.contact{
+background:#083B66;
+color:white;
+padding:70px;
+border-radius:40px;
+text-align:center;
+}
+
+.contact h2{
+font-size:48px;
+margin-bottom:30px;
+}
+
+.contact p{
+font-size:22px;
+margin-bottom:15px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#666;
+}
+
+@media(max-width:900px){
+
+.hero{
+padding:60px 25px;
+}
+
+.section{
+padding:60px 25px;
+}
+
+nav{
+padding:20px 25px;
+}
+
+.hero-text h1{
+font-size:48px;
+}
+
+.hero-text p{
+font-size:20px;
+}
+
+.logo{
+font-size:28px;
+}
+
+.nav-links{
+gap:20px;
+font-size:14px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
-<nav style="background:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
 
-<div style="font-size:28px; font-weight:700; color:#083B66;">
+<nav>
+
+<div class="logo">
 Safe Harbour
 </div>
 
-<div style="display:flex; gap:30px; font-weight:500;">
-<a href="#" style="text-decoration:none; color:#083B66;">Home</a>
-<a href="#" style="text-decoration:none; color:#083B66;">Support</a>
-<a href="#" style="text-decoration:none; color:#083B66;">About</a>
-<a href="#" style="text-decoration:none; color:#083B66;">Contact</a>
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">Support</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
 </div>
 
 </nav>
-<div style="flex:1; min-width:320px;">
-  <h1>A safe place to talk, heal and grow.</h1>
-<div style="flex:1; min-width:320px;">
-  <p>
-    A safe place to talk, heal and grow.<br>
-    Supporting young people aged 10–19 years with emotional wellbeing, anxiety, ADHD, autism and family support.
-  </p>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+A safe place to <span class="script">talk, heal and grow.</span>
+</h1>
+
+<p>
+Supporting young people aged 10–19 years with emotional wellbeing, anxiety, ADHD, autism and family support.
+</p>
+
+<a class="button" href="mailto:safeharbourwellbeing@gmail.com">
+Book a Free Conversation
+</a>
+
 </div>
-  <a class="button" href="mailto:safeharbourwellbeing@gmail.com">
-    Book a Free Conversation
-  </div>
-</header>
 
-<section>
-  <h2>Support Areas</h2>
-<section style="background:#EAF5F5;">
-  <div class="cards">
+<div class="hero-image">
 
-    <div class="card">
-      <h3>Autism</h3>
-      <p>Compassionate and understanding support.</p>
-    </div>
+<img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1400&auto=format&fit=crop">
 
-    <div class="card">
-      <h3>ADHD</h3>
-      <p>Helping young people feel confident and supported.</p>
-    </div>
+</div>
 
-    <div class="card">
-      <h3>Anxiety</h3>
-      <p>Support for worry, overwhelm and emotional wellbeing.</p>
-    </div>
-
-    <div class="card">
-      <h3>School Stress</h3>
-      <p>Helping young people manage school pressures calmly.</p>
-    </div>
-
-    <div class="card">
-      <h3>Family Relationships</h3>
-      <p>Building healthier communication and connection.</p>
-    </div>
-
-    <div class="card">
-      <h3>Emotional Wellbeing</h3>
-      <p>Support to improve confidence and resilience.</p>
-    </div>
-
-  </div>
 </section>
 
-<section>
-  <div class="about">
+<section class="section">
 
-    <h2>About Kim McCarthy</h2>
+<h2 class="section-title">
+Support Areas
+</h2>
 
-    <p>
-      Over 20 years supporting young people and families across Thanet.
-    </p>
+<div class="cards">
 
-    <p>
-      ✔ Enhanced DBS Checked<br>
-      ✔ Safeguarding Level 3<br>
-      ✔ Trauma Informed<br>
-      ✔ Fully Insured
-    </p>
+<div class="card">
+<h3>Autism</h3>
+<p>Compassionate and understanding support for young people.</p>
+</div>
 
-  </div>
+<div class="card">
+<h3>ADHD</h3>
+<p>Helping young people improve confidence and emotional wellbeing.</p>
+</div>
+
+<div class="card">
+<h3>Anxiety</h3>
+<p>Support for worry, panic and feeling overwhelmed.</p>
+</div>
+
+<div class="card">
+<h3>School Stress</h3>
+<p>Helping young people manage school pressures calmly.</p>
+</div>
+
+<div class="card">
+<h3>Family Relationships</h3>
+<p>Building stronger communication and healthier relationships.</p>
+</div>
+
+<div class="card">
+<h3>Emotional Wellbeing</h3>
+<p>Support to improve confidence, resilience and self-esteem.</p>
+</div>
+
+</div>
+
 </section>
 
-<section>
-  <div class="contact">
+<section class="section">
 
-    <h2>Contact Safe Harbour</h2>
+<div class="about">
 
-    <p>
-      📞 07983 381251
-    </p>
+<h2 class="section-title">
+About Kim McCarthy
+</h2>
 
-    <p>
-      ✉ safeharbourwellbeing@gmail.com
-    </p>
+<p style="font-size:22px; margin-bottom:25px;">
+Over 20 years supporting young people and families across Thanet.
+</p>
 
-    <p>
-      📍 Thanet, UK
-    </p>
+<p style="font-size:20px;">
+✔ Enhanced DBS Checked<br><br>
+✔ Safeguarding Level 3<br><br>
+✔ Trauma Informed<br><br>
+✔ Fully Insured
+</p>
 
-  </div>
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="contact">
+
+<h2>
+Contact Safe Harbour
+</h2>
+
+<p>
+📞 07983 381251
+</p>
+
+<p>
+✉ safeharbourwellbeing@gmail.com
+</p>
+
+<p>
+📍 Thanet, UK
+</p>
+
+</div>
+
 </section>
 
 <footer>
-  Safe Harbour Wellbeing © 2026
+Safe Harbour Wellbeing © 2026
 </footer>
 
 </body>
