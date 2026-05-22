@@ -1,16 +1,29 @@
+# Safe Harbour – Final Branded Homepage
+
+## IMPORTANT
+
+1. Open your `index.html`
+2. Press `CTRL + A`
+3. Delete everything
+4. Copy ALL the code below
+5. Paste it into `index.html`
+6. Click **Commit Changes**
+7. Wait 1 minute
+8. Refresh your website
+
+---
+
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Safe Harbour Wellbeing</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,17 +33,20 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#F5FAFA;
 color:#083B66;
-line-height:1.6;
+line-height:1.7;
 }
 
-/* NAVIGATION */
-
 nav{
-background:white;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
 padding:20px 40px;
 display:flex;
 justify-content:space-between;
@@ -38,27 +54,37 @@ align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+box-shadow:0 2px 12px rgba(0,0,0,0.05);
 }
 
 .logo{
-font-size:32px;
+font-size:34px;
 font-weight:700;
 letter-spacing:1px;
+color:#083B66;
+}
+
+.logo span{
+color:#2A8C96;
+font-style:italic;
+font-weight:400;
 }
 
 .nav-links{
 display:flex;
-gap:25px;
+gap:28px;
 }
 
 .nav-links a{
 text-decoration:none;
 color:#083B66;
 font-weight:500;
+transition:0.3s;
 }
 
-/* HERO SECTION */
+.nav-links a:hover{
+color:#2A8C96;
+}
 
 .hero{
 padding:100px 40px;
@@ -67,93 +93,94 @@ flex-wrap:wrap;
 align-items:center;
 justify-content:space-between;
 gap:60px;
-background:linear-gradient(to right,#EAF5F5,#F5FAFA);
-border-radius:0 0 40px 40px;
+background:linear-gradient(to right,#EAF5F5,#F8FCFC);
+border-radius:0 0 50px 50px;
 }
 
 .hero-text{
 flex:1;
-min-width:300px;
+min-width:320px;
 }
 
 .hero-text h1{
-font-size:64px;
-line-height:1.1;
+font-family:'Playfair Display',serif;
+font-size:74px;
+line-height:1.05;
 margin-bottom:30px;
 }
 
-.hero-text span{
+.hero-text h1 span{
 color:#2A8C96;
 font-style:italic;
 font-weight:400;
 }
 
 .hero-text p{
-font-size:22px;
+font-size:23px;
+max-width:650px;
 margin-bottom:40px;
-max-width:620px;
 }
 
 .button{
 display:inline-block;
 background:#2A8C96;
 color:white;
-padding:18px 36px;
+padding:18px 38px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
 font-size:18px;
-box-shadow:0 6px 18px rgba(42,140,150,0.25);
+box-shadow:0 10px 20px rgba(42,140,150,0.25);
 transition:0.3s;
 }
 
 .button:hover{
-transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
 .hero-image{
 flex:1;
-min-width:300px;
+min-width:320px;
 }
 
 .hero-image img{
 width:100%;
-height:520px;
+height:560px;
 object-fit:cover;
 border-radius:35px;
-box-shadow:0 12px 30px rgba(0,0,0,0.12);
+box-shadow:0 18px 40px rgba(0,0,0,0.12);
 }
 
-/* SECTIONS */
-
 .section{
-padding:80px 40px;
+padding:90px 40px;
+max-width:1400px;
+margin:auto;
 }
 
 .section-title{
-font-size:46px;
-margin-bottom:45px;
+font-family:'Playfair Display',serif;
+font-size:52px;
+margin-bottom:50px;
+text-align:center;
 }
-
-/* CARDS */
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
 }
 
 .card{
 background:white;
-padding:35px;
-border-radius:28px;
+padding:38px;
+border-radius:30px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
 border:1px solid #EAF5F5;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .card h3{
@@ -166,106 +193,134 @@ color:#083B66;
 font-size:18px;
 }
 
-/* ABOUT */
-
 .about{
 background:white;
 padding:70px;
-border-radius:35px;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
+border-radius:40px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
 
-/* CONTACT */
+.about-grid{
+display:grid;
+grid-template-columns:320px 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.checks{
+font-size:18px;
+line-height:2;
+}
 
 .contact{
 background:#083B66;
 color:white;
-padding:70px;
-border-radius:35px;
+padding:80px 40px;
 text-align:center;
+border-radius:40px;
 }
 
 .contact h2{
-font-size:46px;
+font-family:'Playfair Display',serif;
+font-size:52px;
 margin-bottom:30px;
 }
 
 .contact p{
-font-size:22px;
+font-size:24px;
 margin-bottom:15px;
 }
 
-/* FOOTER */
-
 footer{
-padding:35px;
+padding:40px;
 text-align:center;
-color:#666;
+color:#5C6F7A;
+font-size:15px;
 }
-
-/* MOBILE */
 
 @media(max-width:900px){
 
 nav{
 padding:20px;
+flex-direction:column;
+gap:15px;
 }
 
 .hero{
 padding:70px 20px;
 }
 
-.section{
-padding:60px 20px;
-}
-
 .hero-text h1{
-font-size:44px;
+font-size:48px;
 }
 
 .hero-text p{
 font-size:20px;
 }
 
-.nav-links{
-gap:15px;
-font-size:14px;
-}
-
-.hero-image img{
-height:350px;
+.section{
+padding:70px 20px;
 }
 
 .section-title{
-font-size:36px;
+font-size:40px;
+}
+
+.about{
+padding:40px 25px;
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.hero-image img{
+height:380px;
+}
+
+.contact{
+padding:60px 25px;
+}
+
+.contact h2{
+font-size:40px;
+}
+
+.contact p{
+font-size:20px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
 
 <div class="logo">
-Safe Harbour
+Safe <span>Harbour</span>
 </div>
 
 <div class="nav-links">
-<a href="#">Home</a>
-<a href="#">Support</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+<a href="#support">Support</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </div>
 
 </nav>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -293,9 +348,7 @@ Book a Free Conversation
 
 </section>
 
-<!-- SUPPORT -->
-
-<section class="section">
+<section class="section" id="support">
 
 <h2 class="section-title">
 Support Areas
@@ -305,73 +358,75 @@ Support Areas
 
 <div class="card">
 <h3>Autism</h3>
-<p>Compassionate support tailored to each young person.</p>
+<p>Compassionate support tailored to each young person and their needs.</p>
 </div>
 
 <div class="card">
 <h3>ADHD</h3>
-<p>Helping improve confidence and emotional wellbeing.</p>
+<p>Helping improve confidence, focus and emotional wellbeing.</p>
 </div>
 
 <div class="card">
 <h3>Anxiety</h3>
-<p>Support for worry, stress and feeling overwhelmed.</p>
+<p>Support for worry, stress and feeling emotionally overwhelmed.</p>
+</div>
+
+<div class="card">
+<h3>Managing Emotions</h3>
+<p>Helping young people understand and regulate emotions positively.</p>
 </div>
 
 <div class="card">
 <h3>School Stress</h3>
-<p>Helping young people manage school pressures calmly.</p>
+<p>Helping young people manage school pressures calmly and confidently.</p>
 </div>
 
 <div class="card">
 <h3>Family Relationships</h3>
-<p>Building healthier communication and stronger relationships.</p>
-</div>
-
-<div class="card">
-<h3>Emotional Wellbeing</h3>
-<p>Support to improve resilience, confidence and self-esteem.</p>
+<p>Building stronger communication and healthier relationships.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- ABOUT -->
-
-<section class="section">
+<section class="section" id="about">
 
 <div class="about">
 
-<h2 class="section-title">
+<div class="about-grid">
+
+<div>
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" alt="Kim McCarthy">
+</div>
+
+<div>
+
+<h2 class="section-title" style="text-align:left; margin-bottom:30px;">
 About Kim McCarthy
 </h2>
 
-<p style="font-size:22px; margin-bottom:25px;">
-Over 20 years supporting young people and families across Thanet.
+<p>
+Over 20 years supporting young people and families across Thanet with compassionate, person-centred wellbeing support.
 </p>
 
-<p style="font-size:18px;">
+<div class="checks">
+✔ Enhanced DBS Checked<br>
+✔ Safeguarding Level 3<br>
+✔ Trauma Informed<br>
+✔ Fully Insured<br>
+✔ Young Person Centred
+</div>
 
-✔ Enhanced DBS Checked<br><br>
+</div>
 
-✔ Safeguarding Level 3<br><br>
-
-✔ Trauma Informed<br><br>
-
-✔ Fully Insured<br><br>
-
-✔ Child & Young Person Centred
-
-</p>
+</div>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
-
-<section class="section">
+<section class="section" id="contact">
 
 <div class="contact">
 
@@ -379,23 +434,13 @@ Over 20 years supporting young people and families across Thanet.
 Contact Safe Harbour
 </h2>
 
-<p>
-📞 07983 381251
-</p>
-
-<p>
-✉ safeharbourwellbeing@gmail.com
-</p>
-
-<p>
-📍 Thanet, Kent
-</p>
+<p>📞 07983 381251</p>
+<p>✉ safeharbourwellbeing@gmail.com</p>
+<p>📍 Thanet, Kent</p>
 
 </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 Safe Harbour Wellbeing © 2026
@@ -403,3 +448,4 @@ Safe Harbour Wellbeing © 2026
 
 </body>
 </html>
+```
